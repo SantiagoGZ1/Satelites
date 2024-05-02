@@ -4,6 +4,7 @@ public class Meteorologica extends Satelite {
 
   public Meteorologica(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double vidaUtil, String influenciaMeteorologica) {
     super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, vidaUtil, influenciaMeteorologica);
+
   }
 
   //Metodo
@@ -13,7 +14,7 @@ public class Meteorologica extends Satelite {
     System.out.println("¿En que ciudad estás ubicado?");
     String ubicacion = sc.nextLine();
     Random random = new Random();
-    int temperatura =  random.nextInt(  56) - 15;
+    int temperatura =  random.nextInt(56) - 15;
     int lluviaPorscentaje = random.nextInt(101);
     if (temperatura >= 30 ){
       System.out.println("El clima va a ser caluroso y humedo" + "\n" + "Temperatura:" + temperatura + "°");
@@ -22,8 +23,7 @@ public class Meteorologica extends Satelite {
     }else if (temperatura >= 9 && temperatura <= 24){
       System.out.println("Está nublado" + "\n" + "Temperatura: " + temperatura + "°" + "\n" + "Lluvia: " + lluviaPorscentaje + "%");
     }else {
-      System.out.println("Hay probabilidades de helada: " + "\n" + temperatura + "°" + "\n" + "Lluvia: " + lluviaPorscentaje + "%");
+      System.out.println("Hay probabilidades de helada: " + "\n" + "Temperatura: " + temperatura + "°" + "\n" + "Lluvia: " + lluviaPorscentaje + "%");
     }
-
   }
 }

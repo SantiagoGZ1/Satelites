@@ -1,4 +1,4 @@
-public class Satelite {
+public class Satelite implements Informe {
   private String tipo;
   private String ubicacionOrientacion;
   private int trayectoria;
@@ -27,15 +27,14 @@ public class Satelite {
 
   @Override
   public String toString() {
-    return "Satelites{" +
-        "tipo='" + tipo + '\'' +
-        ", ubicacionOrientacion='" + ubicacionOrientacion + '\'' +
-        ", trayectoria=" + trayectoria +
-        ", cantidadDatos=" + cantidadDatos +
-        ", tipoDatos='" + tipoDatos + '\'' +
-        ", vidaUtil=" + vidaUtil +
-        ", influenciaMeteorologica='" + influenciaMeteorologica + '\'' +
-        '}';
+    return "Satelites" +
+        "Tipo: " + tipo + "\n" +
+        "Ubicacion Orientacion: " + ubicacionOrientacion + "\n" +
+        "Trayectoria: " + trayectoria + "\n" +
+        "Cantidad Datos: " + cantidadDatos + "\n" +
+        "Tipo Datos: " + tipoDatos + "\n" +
+        "Vida Util: " + vidaUtil + "\n" +
+        "Influencia Meteorologica: " + influenciaMeteorologica + "\n";
   }
 }
 //espionaje e investigacion cientifica
