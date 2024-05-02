@@ -2,31 +2,32 @@
 import java.util.Random;
 import java.util.Scanner;
 public class Comunicacion extends Satelite {
-
-  //private String idHogar;
-  private String paquete;
-
-  public Comunicacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double vidaUtil, String influenciaMeteorologica) {
-    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, vidaUtil, influenciaMeteorologica);
-    this.paquete = paquete;
+  public Comunicacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidad, String influenciaMeteorologica) {
+    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, utilidad, influenciaMeteorologica);
   }
 
 
-  public void asignarPaquete(){
+  public void infoUsuarios(){
+    String clientesBronce = "100 canales de Televión nacional." + "\n" + "30 megas internet";
+    String clientesplata = "200 canales de Televión nacional." + "\n" + "60 megas internet";
     Scanner sc = new Scanner(System.in);
-    System.out.println("Ingrese el id de su hogar");
-    String idHogar= sc.nextLine();
-    System.out.println("¿Desea contratar un paquete para su hogar? n/ 1. Sí n/ 2.no");
-    int eleccionPaquete=sc.nextInt();
-    Random random= new Random();
-    int paqueteRandom= random.nextInt(3);
+    System.out.println("Ingrese el id del usuario (entre 1 y 99)");
+    int id= sc.nextInt();
 
-    if (eleccionPaquete==1){
-      switch (paqueteRandom){
-
-        case 1:
-          System.out.println("Según el id de su hogar se le asignó el paquete: n/ 1. Paquetes básicos: selección de canales esenciales que cubren una variedad de géneros como noticias, entretenimiento, deportes y canales locales." + "n/" );
-      }
+    if (id >= 1 && id <= 50){
+      System.out.println(clientesBronce);
+    } else if (id >= 51 && id <= 99) {
+      System.out.println(clientesplata);
+    }else {
+      System.out.println("Error, el ID no existe");
     }
+  }
+
+  @Override
+  public void vidaUtil(){
+
+  }
+  @Override
+  public void informe() {
   }
 }

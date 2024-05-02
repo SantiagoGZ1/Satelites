@@ -11,8 +11,8 @@ public class Navegacion extends Satelite {
   private String direccion;
   private float distancia;
 
-  public Navegacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double vidaUtil, String influenciaMeteorologica, String sensorGps) {
-    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, vidaUtil, influenciaMeteorologica);
+  public Navegacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidad, String influenciaMeteorologica, String sensorGps) {
+    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, utilidad, influenciaMeteorologica);
     this.latitud = latitud;
     this.longitud = longitud;
     this.sensorGps = sensorGps;
@@ -40,6 +40,15 @@ public class Navegacion extends Satelite {
         "Direccion: " + ubi);
 
     System.out.println("Usted se encuentra a " + distancia + "KM de distancia del destino" );
+  }
+
+
+  @Override
+  public void vidaUtil(){
+
+  }
+  @Override
+  public void informe() {
   }
 
 }

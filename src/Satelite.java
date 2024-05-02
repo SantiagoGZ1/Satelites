@@ -4,7 +4,7 @@ public class Satelite implements Informe {
   private int trayectoria;
   private int cantidadDatos;
   private String tipoDatos;
-  private double vidaUtil;
+  private double utilidad;
   private String influenciaMeteorologica;
 
   //Constructor
@@ -14,7 +14,7 @@ public class Satelite implements Informe {
     this.trayectoria = trayectoria;
     this.cantidadDatos = cantidadDatos;
     this.tipoDatos = tipoDatos;
-    this.vidaUtil = vidaUtil;
+    this.utilidad = vidaUtil;
     this.influenciaMeteorologica = influenciaMeteorologica;
   }
 
@@ -33,8 +33,18 @@ public class Satelite implements Informe {
         "Trayectoria: " + trayectoria + "\n" +
         "Cantidad Datos: " + cantidadDatos + "\n" +
         "Tipo Datos: " + tipoDatos + "\n" +
-        "Vida Util: " + vidaUtil + "\n" +
+        "Vida Util: " + utilidad + "\n" +
         "Influencia Meteorologica: " + influenciaMeteorologica + "\n";
   }
+  public void vidaUtil(){
+
+  }
+
+
+  @Override
+  public void informe() {
+
+  }
 }
+
 //espionaje e investigacion cientifica

@@ -2,8 +2,8 @@ import java.util.Scanner;
 import java.util.Random;
 public class Meteorologica extends Satelite {
 
-  public Meteorologica(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double vidaUtil, String influenciaMeteorologica) {
-    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, vidaUtil, influenciaMeteorologica);
+  public Meteorologica(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidad, String influenciaMeteorologica) {
+    super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, utilidad, influenciaMeteorologica);
 
   }
 
@@ -25,5 +25,16 @@ public class Meteorologica extends Satelite {
     }else {
       System.out.println("Hay probabilidades de helada: " + "\n" + "Temperatura: " + temperatura + "°" + "\n" + "Lluvia: " + lluviaPorscentaje + "%");
     }
+  }
+
+  @Override
+  public void vidaUtil(){
+
+  }
+
+  @Override
+  public void informe() {
+    System.out.println("Informacion objeto: ");
+    System.out.println("Informacion: ");
   }
 }
