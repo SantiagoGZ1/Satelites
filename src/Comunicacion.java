@@ -21,13 +21,7 @@ public class Comunicacion extends Satelite {
     }else {
       System.out.println("Error, el ID no existe");
     }
-  }
-
-  @Override
-  public void vidaUtil(){
-
-  }
-  @Override
-  public void informe() {
+    setUtilidadTiempo(getUtilidadTiempo()- 2);
+    System.out.println("nueva vida: " + getUtilidadTiempo());
   }
 }

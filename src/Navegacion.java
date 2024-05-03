@@ -38,17 +38,11 @@ public class Navegacion extends Satelite {
         "Latitud: "  + latitud + "\n" +
         "Longitud: " + longitud + "\n" +
         "Direccion: " + ubi);
-
     System.out.println("Usted se encuentra a " + distancia + "KM de distancia del destino" );
+
+    setUtilidadTiempo(getUtilidadTiempo()- 2);
+    System.out.println("nueva vida: " + getUtilidadTiempo());
   }
 
-
-  @Override
-  public void vidaUtil(){
-
-  }
-  @Override
-  public void informe() {
-  }
 
 }

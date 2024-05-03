@@ -1,28 +1,29 @@
-public class Satelite implements Informe {
+public class Satelite {
   private String tipo;
   private String ubicacionOrientacion;
   private int trayectoria;
   private int cantidadDatos;
   private String tipoDatos;
-  private double utilidad;
+  private double utilidadTiempo;
   private String influenciaMeteorologica;
 
   //Constructor
-  public Satelite(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double vidaUtil, String influenciaMeteorologica) {
+  public Satelite(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidadTiempo, String influenciaMeteorologica) {
     this.tipo = tipo;
     this.ubicacionOrientacion = ubicacionOrientacion;
     this.trayectoria = trayectoria;
     this.cantidadDatos = cantidadDatos;
     this.tipoDatos = tipoDatos;
-    this.utilidad = vidaUtil;
+    this.utilidadTiempo = utilidadTiempo;
     this.influenciaMeteorologica = influenciaMeteorologica;
   }
 
+  public double getUtilidadTiempo() {
+    return utilidadTiempo;
+  }
 
-  //******
-  //Metodos mostrar info
-  public void mastrarInfo(){ //polimorfismo
-    //TODO Mostrar info general de cada satelite
+  public void setUtilidadTiempo(double utilidadTiempo) {
+    this.utilidadTiempo = utilidadTiempo;
   }
 
   @Override
@@ -33,18 +34,10 @@ public class Satelite implements Informe {
         "Trayectoria: " + trayectoria + "\n" +
         "Cantidad Datos: " + cantidadDatos + "\n" +
         "Tipo Datos: " + tipoDatos + "\n" +
-        "Vida Util: " + utilidad + "\n" +
+        "Vida Util: " + utilidadTiempo + "\n" +
         "Influencia Meteorologica: " + influenciaMeteorologica + "\n";
   }
-  public void vidaUtil(){
 
-  }
-
-
-  @Override
-  public void informe() {
-
-  }
 }
 
 //espionaje e investigacion cientifica
