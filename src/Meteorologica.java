@@ -39,9 +39,5 @@ public class Meteorologica extends Satelite implements Sensor {
   public void tomarFoto() {
     System.out.println("Tomando foto...");
     System.out.println("Foto tomada");
-    String imagePath = "Workshop1_Satelite/fotoSatelite.jpeg"; // Ruta de tu imagen
-    String imageLink = "file:///" + imagePath;
-    System.out.println("Haz clic en el siguiente enlace para ver la imagen:");
-    System.out.println(imageLink);
   }
 }
