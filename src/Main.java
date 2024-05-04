@@ -3,15 +3,15 @@
 public class Main {
   public static void main(String[] args) {
 
-    Meteorologica satClimahoy =  new Meteorologica("volador","jose",22, 40,"el mejor",40.3,"mucho viento" );
 
-    Comunicacion comunicacion = new Comunicacion("hola", "lejos",20, 10, "nose", 10.0,"si");
+    Comunicacion comunicacion = new Comunicacion("hola", "lejos", 20, 10, "nose", 10.0, "si");
 
-    System.out.println(satClimahoy.toString());
-    satClimahoy.predecirClima();
+    Navegacion gps = new Navegacion("si", "sad", 22, 34, "no", 3399.0, "nose", "el mejor");
 
+    Meteorologica meteo = new Meteorologica("adad", "no", 40, 29, "si", 40, "tornados", 40);
+
+    System.out.println(gps.toString());
+    meteo.predecirClima();
+    meteo.tomarFoto();
   }
-
-
-
 }

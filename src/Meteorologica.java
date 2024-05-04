@@ -1,11 +1,15 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Meteorologica extends Satelite {
+public class Meteorologica extends Satelite implements Sensor {
   //Metodos unicos para calcular meteorologia
 
+  private int pxCamara;
   private Clima clima;
-  public Meteorologica(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidadTiempo, String influenciaMeteorologica) {
+
+  public Meteorologica(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidadTiempo, String influenciaMeteorologica, int pxCamara) {
     super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, utilidadTiempo, influenciaMeteorologica);
+    this.pxCamara = pxCamara;
+    this.clima = new Clima();
   }
 
   //Metodo
@@ -24,7 +28,20 @@ public class Meteorologica extends Satelite {
 
     //disminuye la vida util por su uso
     setUtilidadTiempo(getUtilidadTiempo() -2);
-    System.out.println("nueva vida: " + getUtilidadTiempo());
   }
 
+  @Override
+  public void calibrarSensor() {
+    System.out.println("Calibrando sensor de la camara de " + pxCamara + "MP");
+  }
+
+  @Override
+  public void tomarFoto() {
+    System.out.println("Tomando foto...");
+    System.out.println("Foto tomada");
+    String imagePath = "Workshop1_Satelite/fotoSatelite.jpeg"; // Ruta de tu imagen
+    String imageLink = "file:///" + imagePath;
+    System.out.println("Haz clic en el siguiente enlace para ver la imagen:");
+    System.out.println(imageLink);
+  }
 }
