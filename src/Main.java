@@ -4,14 +4,25 @@ public class Main {
   public static void main(String[] args) {
 
 
-    Comunicacion comunicacion = new Comunicacion("hola", "lejos", 20, 10, "nose", 10.0, "si");
+    Navegacion gps = new Navegacion("porfavor","oporfavorfunciona",15,52,"auxlio",1526,"quenosalga");
 
-    Navegacion gps = new Navegacion("si", "sad", 22, 34, "no", 3399.0, "nose", "el mejor");
 
-    Meteorologica meteo = new Meteorologica("adad", "no", 40, 29, "si", 40, "tornados", 40);
+//    System.out.println(gps.toString());
+//    meteo.predecirClima();
+//    meteo.tomarFoto();
 
-    System.out.println(gps.toString());
-    meteo.predecirClima();
-    meteo.tomarFoto();
+    Reporte reportePrimerosSatelites= new Reporte();
+    reportePrimerosSatelites.agregarSatNavegacion(gps);
+
+
+    Navegacion nav2= new Navegacion("kdjaksj","ckasjdask",12,52,"dados",1526,"no");
+    reportePrimerosSatelites.agregarSatNavegacion(nav2);
+    reportePrimerosSatelites.reporteNavegacion();
+
+  nav2.precision();
+
+  reportePrimerosSatelites.reporteNavegacion();
+
+
   }
 }

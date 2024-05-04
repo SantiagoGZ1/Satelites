@@ -39,5 +39,7 @@ public class Meteorologica extends Satelite implements Sensor {
   public void tomarFoto() {
     System.out.println("Tomando foto...");
     System.out.println("Foto tomada");
+    //disminuye la vida util por su uso
+    setUtilidadTiempo(getUtilidadTiempo() -2);
   }
 }

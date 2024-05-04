@@ -12,14 +12,34 @@ public class Navegacion extends Satelite implements Conectividad {
   private float distancia;
   private int conectividad;
 
-  public Navegacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidadTiempo, String influenciaMeteorologica, String sensorGps) {
+  public Navegacion(String tipo, String ubicacionOrientacion, int trayectoria, int cantidadDatos, String tipoDatos, double utilidadTiempo, String influenciaMeteorologica) {
     super(tipo, ubicacionOrientacion, trayectoria, cantidadDatos, tipoDatos, utilidadTiempo, influenciaMeteorologica);
     this.latitud = latitud;
     this.longitud = longitud;
-    this.sensorGps = sensorGps;
+    this.sensorGps= sensorGps;
     this.direccion = direccion;
     this.distancia = distancia;
     this.conectividad = conectividad;
+  }
+
+  public int getLatitud() {
+    return latitud;
+  }
+
+  public int getLongitud() {
+    return longitud;
+  }
+
+  public String getSensorGps() {
+    return sensorGps;
+  }
+
+  public String getDireccion() {
+    return direccion;
+  }
+
+  public float getDistancia() {
+    return distancia;
   }
 
   public int getConectividad() {
@@ -49,7 +69,6 @@ public class Navegacion extends Satelite implements Conectividad {
     System.out.println("Usted se encuentra a " + distancia + "KM de distancia del destino");
 
     setUtilidadTiempo(getUtilidadTiempo() - 2);
-    System.out.println("nueva vida: " + getUtilidadTiempo());
   }
 
   @Override
@@ -72,5 +91,7 @@ public class Navegacion extends Satelite implements Conectividad {
     setConectividad(getConectividad() + 20);
     System.out.println("Nueva conexion: " + getConectividad());
   }
+
+
 }
 

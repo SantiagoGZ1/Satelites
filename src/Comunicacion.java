@@ -22,7 +22,7 @@ public class Comunicacion extends Satelite implements Conectividad{
     this.conectividad = conectividad;
   }
 
-  public void infoUsuarios(){
+  public void activarSenal(){
     Scanner sc = new Scanner(System.in);
     System.out.println("Selecione una opcion: " + "\n" +
         "1. Activar señal de television." + "\n" +
@@ -53,6 +53,8 @@ public class Comunicacion extends Satelite implements Conectividad{
       default:
         System.out.println("Opcion errada");
     }
+    //disminuye la vida util por su uso
+    setUtilidadTiempo(getUtilidadTiempo() -2);
   }
 
   @Override

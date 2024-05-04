@@ -18,6 +18,30 @@ public class Satelite {
     this.influenciaMeteorologica = influenciaMeteorologica;
   }
 
+  public String getTipo() {
+    return tipo;
+  }
+
+  public String getUbicacionOrientacion() {
+    return ubicacionOrientacion;
+  }
+
+  public int getTrayectoria() {
+    return trayectoria;
+  }
+
+  public int getCantidadDatos() {
+    return cantidadDatos;
+  }
+
+  public String getTipoDatos() {
+    return tipoDatos;
+  }
+
+  public String getInfluenciaMeteorologica() {
+    return influenciaMeteorologica;
+  }
+
   public double getUtilidadTiempo() {
     return utilidadTiempo;
   }
@@ -35,7 +59,7 @@ public class Satelite {
         "Cantidad Datos: " + cantidadDatos + "\n" +
         "Tipo Datos: " + tipoDatos + "\n" +
         "Vida Util: " + utilidadTiempo + "\n" +
-        "Influencia Meteorologica: " + influenciaMeteorologica + "\n";
+        "Influencia Meteorologica: " + influenciaMeteorologica + "\n ******* \n";
   }
 
 }
