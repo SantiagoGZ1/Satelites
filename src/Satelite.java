@@ -50,16 +50,21 @@ public class Satelite {
     this.utilidadTiempo = utilidadTiempo;
   }
 
+//  public void planJubilacion(double utilidadTiempo){
+//    if (getUtilidadTiempo()>5){}
+//
+//  }
+
   @Override
   public String toString() {
     return "Satelites" +
         "Tipo: " + tipo + "\n" +
-        "Ubicacion Orientacion: " + ubicacionOrientacion + "\n" +
+        "Ubicacion- orientación del satélite: " + ubicacionOrientacion + "\n" +
         "Trayectoria: " + trayectoria + "\n" +
-        "Cantidad Datos: " + cantidadDatos + "\n" +
-        "Tipo Datos: " + tipoDatos + "\n" +
-        "Vida Util: " + utilidadTiempo + "\n" +
-        "Influencia Meteorologica: " + influenciaMeteorologica + "\n ******* \n";
+        "Cantidad de datos que puede almacenar: " + cantidadDatos + "\n" +
+        "Tipo datos: " + tipoDatos + "\n" +
+        "Vida útil del satélite: " + utilidadTiempo + "\n" +
+        "Influencia meteorológica que puede afectar al satélite: " + influenciaMeteorologica + "\n ******* \n";
   }
 
 }
